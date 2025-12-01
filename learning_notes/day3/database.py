@@ -2,7 +2,7 @@ from sqlmodel import SQLModel, create_engine, Field, Session
 from typing import Optional
 from datetime import datetime
 from sqlmodel import Field
-from typing import Optional, Union
+from typing import Optional
 
 # 定义文章模型，既是数据库模型又是pydantic的数据模型
 class Article(SQLModel, table=True):
