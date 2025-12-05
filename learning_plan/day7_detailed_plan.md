@@ -54,25 +54,24 @@ sample_articles = [
 确保选择添加到系统 PATH 环境变量。
 
 ### FastAPI 和 uvicorn 安装
-```bash
+
 pip install fastapi uvicorn
-```
+
 
 ### 第一个 FastAPI 应用
-```python
+
 from fastapi import FastAPI
 
 app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
-```
+
 
 ### 运行应用
-```bash
+
 uvicorn main:app --reload
-```
+
 
 ## 总结
 今天我们成功搭建了开发环境，并运行了第一个 FastAPI 应用。
@@ -98,7 +97,7 @@ Pydantic 是一个数据验证和设置管理的库。
 Python 3.5+ 引入的功能，提高代码可读性和可维护性。
 
 ### 模型定义
-```python
+
 from pydantic import BaseModel
 from typing import Optional
 
@@ -108,11 +107,11 @@ class Article(BaseModel):
     content: str
     author: Optional[str] = None
     published: bool = False
-```
+
 
 ## 总结
 今天我们学习了如何定义数据模型，并理解了类型提示的重要性。
-""",
+,
         "author": "教程作者",
         "published": True
     }

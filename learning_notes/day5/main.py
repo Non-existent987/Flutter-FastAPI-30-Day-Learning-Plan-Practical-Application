@@ -29,8 +29,8 @@ app.add_middleware(
 # 创建文章接口
 @app.post("/articles/", response_model=ArticleRead, status_code=status.HTTP_201_CREATED)
 def create_article(*,
-                   article: ArticleCreate, 
-                   session: Session = Depends(get_session)):
+                   article: ArticleCreate, # 接收ArticleCreate类型的参数
+                   session: Session = Depends(get_session)):# 使用依赖项获取会话
     db_article = Article.from_orm(article)
     session.add(db_article)
     session.commit()
