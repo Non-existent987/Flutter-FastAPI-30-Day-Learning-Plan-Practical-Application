@@ -75,7 +75,7 @@ my_tutorial_site/
 │   └── main.dart          # 应用入口文件
 ├── pubspec.yaml           # 项目配置文件
 ├── test/                  # 测试文件
-└── android/ios/web/       # 平台特定代码
+└── web/                   # 平台特定代码
 ```
 
 #### lib/main.dart（默认计数器应用）：
